@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+:root {
+  --background: #e0e5ec;
+  --gray: #797d7f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  padding: 10px;
+  background-color: var(--background);
+}
+.lista-pokemones {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  height: 800px;
+}
+.paginador {
+  display: flex;
+  justify-content: center;
+}
+.paginador button {
+  background-color: red;
+  border: 0;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.paginador button.disabled{
+ background-color: grey;
+
+
+}
+.card {
+  text-align: center;
+  box-shadow: 5px 5px 6px rgba(163, 177, 198, 0.6),
+    -5px -5px 6px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  transition: 1s;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 5px 5px 6px rgba(163, 177, 198, 0.6),
+    -5px -5px 6px rgba(255, 17, 255, 0.5);
+}
+.card img {
+  border-radius: 50px;
+  background-color: var(--background);
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+.card h2 {
+  text-transform: capitalize;
+}
+
+@media (min-width: 200px) {
+  .lista-pokemones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .lista-pokemones {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  .lista-pokemones {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
